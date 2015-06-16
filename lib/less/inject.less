@@ -1,0 +1,207 @@
+@base03:    #002b36;
+@base02:    #073642;
+@base01:    #586e75;
+@base00:    #657b83;
+@base0:     #839496;
+@base1:     #93a1a1;
+@base2:     #eee8d5;
+@base3:     #fdf6e3;
+@yellow:    #b58900;
+@orange:    #cb4b16;
+@red:       #dc322f;
+@magenta:   #d33682;
+@violet:    #6c71c4;
+@blue:      #268bd2;
+@cyan:      #2aa198;
+@green:     #859900;
+
+.vertical-four-colors(@start-color, @mid-color, @color-stop, @mid-color-2, @color-stop-2, @end-color) {
+  background-image: -webkit-linear-gradient(@start-color, @mid-color, @color-stop, @mid-color-2 @color-stop-2, @end-color) !important;
+  background-image: -o-linear-gradient(@start-color, @mid-color @color-stop, @mid-color-2 @color-stop-2, @end-color) !important;
+  background-image: linear-gradient(@start-color, @mid-color @color-stop, @mid-color-2 @color-stop-2, @end-color) !important;
+  background-repeat: no-repeat !important;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@start-color), argb(@end-color))) !important;
+}
+
+.gradientize(@color1, @color2, @color3, @color4) {
+  .vertical-four-colors(@color1, @color2, 33%, @color3, 66%, @color4);
+}
+.gradientize-2(@color1, @color2, @color3, @color4) {
+  .vertical-four-colors(@color1, @color2, 40%, @color3, 60%, @color4);
+}
+
+.accentize(@accent) {
+  a, a:active, a:visited, code.url {
+    color: @accent !important;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    color:@accent !important;
+  }
+}
+
+
+.accentize-color(@accent) {
+  color:@accent !important;
+}
+
+.accentize-bg(@accent) {
+  background-color:@accent !important;
+  border-color:lighten(@accent,10%) !important;
+}
+
+.rebase(@rebase03,@rebase02,@rebase01,@rebase00,@rebase0,@rebase1,@rebase2,@rebase3)
+{
+  background-color:@rebase03 !important;
+  color:@rebase0 !important;
+
+  * {
+    color:@rebase0 !important;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    color:@rebase1 !important;
+    border-color: @rebase0 !important;
+  }
+
+  a, a:active, a:visited {
+    color: @rebase1 !important;
+  }
+
+  .header,.bootcamp h1 {
+    background-color: @rebase02 !important;
+  }
+
+  .btn,.social-count {
+    background-color: @rebase01 !important;
+    .gradientize(@rebase03,@rebase02, @rebase02, @rebase03);
+    color:@rebase3 !important;
+  }
+
+  .boxed-group>h3{
+    color:@rebase2 !important;
+    background-color:@rebase02 !important;
+  }
+
+  .dashboard-sidebar {
+    .accentize(@blue);
+  }
+
+  .sfbgg {
+    /*
+    color:@rebase3 !important;
+    background-color:@rebase01 !important;
+    */
+    .gradientize(@rebase03,@rebase02, @rebase02, @rebase03);
+  }
+
+  .dropdown-menu,.action-menu,.action-menu ul,.action-menu li,.action-menu a {
+    .accentize-bg(@rebase03);
+    .accentize(@blue);
+    font-weight:bold;
+  }
+
+  #logo {
+    display:none;
+  }
+
+  .mn-dwn-arw {
+    border-top-color:@rebase2 !important;
+    border-bottom-color:@rebase2;
+  }
+
+  .dropdown-menu:after {
+    border-bottom-color: @rebase03 !important;
+  }
+
+
+  #top_nav div {
+    .accentize(@orange);
+    background-color:@rebase02 !important;
+    font-weight:bold;
+  }
+
+  #appbar,.ab_button  {
+    .gradientize(@rebase03,lighten(@rebase02, 5%), @rebase02, @rebase03);
+    font-weight:bold;
+  }
+  .ab_button  {
+    border:1px solid darken(@cyan,20%) !important;
+  }
+  .ab_button.selected  {
+    background-color:@rebase00 !important;
+    background-image:none !important;
+    border:1px solid darken(@cyan,10%) !important;
+  }
+
+  // google search bar
+  #sfdiv,.sbib_b,.gsst_b,.sbdd_b,.sbsb_b,label.js-chromeless-input-container {
+    background-color:@rebase02 !important;
+    color:@rebase2 !important;
+    font-weight:bold !important;
+    border-color:@rebase2 !important;
+  }
+
+  // google search header
+  .g a {
+    color:@rebase1 !important;
+  }
+  // google search text
+  .g span {
+    color:@rebase0 !important;
+  }
+  .g em {
+    color:@blue !important;
+  }
+
+  // google search button
+  #sblsbb{
+    background-image:none !important;
+    background-color:@rebase02 !important;
+    color:@rebase2 !important;
+    border-color:@rebase2 !important;
+  }
+
+  // mic
+  .sbib_b input,.gsst_b span {
+    /*
+    color:@cyan !important;
+    font-weight:bold !important;
+    */
+  }
+
+  .srg {
+    color:@rebase3 !important;
+    a:@rebase3 !important;
+  }
+
+
+
+}
+
+
+/* light is default mode, so pair with general html definition */
+.light() {
+  .rebase(@base3,@base2,@base1,@base0,@base00,@base01,@base02,@base03);
+}
+
+.dark()  {
+  .rebase(@base03,@base02,@base01,@base00,@base0,@base1,@base2,@base3);
+}
+
+html * {
+  color-profile: sRGB !important;
+  rendering-intent: auto !important;
+}
+
+html, body,#cnt {
+  .dark();
+}
+
+article {
+  .light();
+}
+.markdown-body {
+  .light();
+}
+

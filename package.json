@@ -5,7 +5,9 @@
   "main": "index.js",
   "preferGlobal": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "bash build\\build-css",
+    "build:js": "bash build\\build-js",
+    "build": "npm run build:css & npm run build:js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/cchamberlain/chromarized/issues"
   },
-  "homepage": "https://github.com/cchamberlain/chromarized#readme"
+  "homepage": "https://github.com/cchamberlain/chromarized#readme",
+  "devDependencies": {
+    "less": "^2.5.1"
+  }
 }

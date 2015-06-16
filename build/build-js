@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+input_path="lib/js"
+output_root="ext/src/inject"
+output_path="$output_root/inject.js"
+
+rm "$output_path"
+mkdir -p "$output_root"
+
+node_modules/.bin/browserify "$input_path" --insert-globals -o "$output_path"
