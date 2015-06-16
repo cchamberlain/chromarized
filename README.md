@@ -1,2 +1,3 @@
-# chromarized
-Nodejs portable easy installer for msys2 and integration with command line utilities.
+# chromarized (WIP)
+
+smart color switching for chrome
