@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+input_path="lib/less/inject.less"
+output_root="ext/src/inject"
+output_path="$output_root/inject.css"
+lessc_path="./node_modules/.bin/lessc"
+
+
+mkdir -p "$output_root"
+
+./node_modules/.bin/catw -wvc ".//node_modules//.bin//lessc $FILE $output_path" ./lib/less/inject.less

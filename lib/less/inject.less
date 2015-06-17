@@ -1,66 +1,110 @@
-@base03:    #002b36;
-@base02:    #073642;
-@base01:    #586e75;
-@base00:    #657b83;
-@base0:     #839496;
-@base1:     #93a1a1;
-@base2:     #eee8d5;
-@base3:     #fdf6e3;
-@yellow:    #b58900;
-@orange:    #cb4b16;
-@red:       #dc322f;
-@magenta:   #d33682;
-@violet:    #6c71c4;
-@blue:      #268bd2;
-@cyan:      #2aa198;
-@green:     #859900;
+/*
+@base03: #002b36;
+@base02: #073642;
+@base01: #586e75;
+@base00: #657b83;
+@base0: #839496;
+@base1: #93a1a1;
+@base2: #eee8d5;
+@base3: #fdf6e3;
+@yellow: #b58900;
+@orange: #cb4b16;
+@red: #dc322f;
+@magenta: #d33682;
+@violet: #6c71c4;
+@blue: #268bd2;
+@cyan: #2aa198;
+@green: #859900;
+
+.make-fg-class(@color) {
+  .fg-@{color} {
+    color: @color !important;
+  }
+}
+.make-bg-class(@color) {
+  .bg-@{color} {
+    background-color: @color !important;
+  }
+}
+
+.make-fg-class(@base03);
+.make-bg-class(@base03);
+.make-fg-class(@base02);
+.make-bg-class(@base02);
+.make-fg-class(@base01);
+.make-bg-class(@base01);
+.make-fg-class(@base00);
+.make-bg-class(@base00);
+.make-fg-class(@base0);
+.make-bg-class(@base0);
+.make-fg-class(@base1);
+.make-bg-class(@base1);
+.make-fg-class(@base2);
+.make-bg-class(@base2);
+.make-fg-class(@base3);
+.make-bg-class(@base3);
+.make-fg-class(@yellow);
+.make-fg-class(@yellow);
+.make-fg-class(@orange);
+.make-bg-class(@orange);
+.make-fg-class(@red);
+.make-bg-class(@red);
+.make-fg-class(@magenta);
+.make-bg-class(@magenta);
+.make-fg-class(@violet);
+.make-bg-class(@violet);
+.make-fg-class(@blue);
+.make-bg-class(@blue);
+.make-fg-class(@cyan);
+.make-bg-class(@cyan);
+.make-fg-class(@green);
+.make-bg-class(@green);
 
 .vertical-four-colors(@start-color, @mid-color, @color-stop, @mid-color-2, @color-stop-2, @end-color) {
   background-image: -webkit-linear-gradient(@start-color, @mid-color, @color-stop, @mid-color-2 @color-stop-2, @end-color) !important;
   background-image: -o-linear-gradient(@start-color, @mid-color @color-stop, @mid-color-2 @color-stop-2, @end-color) !important;
   background-image: linear-gradient(@start-color, @mid-color @color-stop, @mid-color-2 @color-stop-2, @end-color) !important;
   background-repeat: no-repeat !important;
-  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@start-color), argb(@end-color))) !important;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", argb(@start-color), argb(@end-color))) !important;
 }
 
 .gradientize(@color1, @color2, @color3, @color4) {
   .vertical-four-colors(@color1, @color2, 33%, @color3, 66%, @color4);
 }
+
 .gradientize-2(@color1, @color2, @color3, @color4) {
   .vertical-four-colors(@color1, @color2, 40%, @color3, 60%, @color4);
 }
 
 .accentize(@accent) {
   a, a:active, a:visited, code.url {
-    color: @accent !important;
+    color: @accent!important;
   }
 
-  h1,h2,h3,h4,h5,h6 {
-    color:@accent !important;
+  h1, h2, h3, h4, h5, h6 {
+    color: @accent !important;
   }
 }
 
-
 .accentize-color(@accent) {
-  color:@accent !important;
+  color: @accent !important;
 }
 
 .accentize-bg(@accent) {
-  background-color:@accent !important;
-  border-color:lighten(@accent,10%) !important;
+  background-color: @accent !important;
+  border-color: lighten(@accent, 10%) !important;
 }
 
-.rebase(@rebase03,@rebase02,@rebase01,@rebase00,@rebase0,@rebase1,@rebase2,@rebase3)
-{
-  background-color:@rebase03 !important;
-  color:@rebase0 !important;
+.rebase(@rebase03,@rebase02,@rebase01,@rebase00,@rebase0,@rebase1,@rebase2,@rebase3) {
+  background-color: @rebase03 !important;
+  color: @rebase0 !important;
 
   * {
-    color:@rebase0 !important;
+    color: @rebase0 !important;
   }
 
-  h1,h2,h3,h4,h5,h6 {
-    color:@rebase1 !important;
+  h1, h2, h3, h4, h5, h6 {
+    color: @rebase1 !important;
     border-color: @rebase0 !important;
   }
 
@@ -68,19 +112,19 @@
     color: @rebase1 !important;
   }
 
-  .header,.bootcamp h1 {
+  .header, .bootcamp h1 {
     background-color: @rebase02 !important;
   }
 
-  .btn,.social-count {
+  .btn, .social-count {
     background-color: @rebase01 !important;
-    .gradientize(@rebase03,@rebase02, @rebase02, @rebase03);
-    color:@rebase3 !important;
+    .gradientize(@rebase03, @rebase02, @rebase02, @rebase03);
+    color: @rebase3 !important;
   }
 
-  .boxed-group>h3{
-    color:@rebase2 !important;
-    background-color:@rebase02 !important;
+  .boxed-group > h3 {
+    color: @rebase2 !important;
+    background-color: @rebase02 !important;
   }
 
   .dashboard-sidebar {
@@ -88,105 +132,90 @@
   }
 
   .sfbgg {
-    /*
-    color:@rebase3 !important;
-    background-color:@rebase01 !important;
-    */
-    .gradientize(@rebase03,@rebase02, @rebase02, @rebase03);
+    .gradientize(@rebase03, @rebase02, @rebase02, @rebase03);
   }
 
-  .dropdown-menu,.action-menu,.action-menu ul,.action-menu li,.action-menu a {
+  .dropdown-menu, .action-menu, .action-menu ul, .action-menu li, .action-menu a {
     .accentize-bg(@rebase03);
     .accentize(@blue);
-    font-weight:bold;
+    font-weight: bold;
   }
 
   #logo {
-    display:none;
+    display: none;
   }
 
   .mn-dwn-arw {
-    border-top-color:@rebase2 !important;
-    border-bottom-color:@rebase2;
+    border-top-color: @rebase2 !important;
+    border-bottom-color: @rebase2;
   }
 
   .dropdown-menu:after {
     border-bottom-color: @rebase03 !important;
   }
 
-
   #top_nav div {
     .accentize(@orange);
-    background-color:@rebase02 !important;
-    font-weight:bold;
+    background-color: @rebase02 !important;
+    font-weight: bold;
   }
 
-  #appbar,.ab_button  {
-    .gradientize(@rebase03,lighten(@rebase02, 5%), @rebase02, @rebase03);
-    font-weight:bold;
+  #appbar, .ab_button {
+    .gradientize(@rebase03, lighten(@rebase02, 5%), @rebase02, @rebase03);
+    font-weight: bold;
   }
-  .ab_button  {
-    border:1px solid darken(@cyan,20%) !important;
+  .ab_button {
+    border: 1px solid darken(@cyan, 20%) !important;
   }
-  .ab_button.selected  {
-    background-color:@rebase00 !important;
-    background-image:none !important;
-    border:1px solid darken(@cyan,10%) !important;
+  .ab_button.selected {
+    background-color: @rebase00 !important;
+    background-image: none !important;
+    border: 1px solid darken(@cyan, 10%) !important;
   }
 
   // google search bar
-  #sfdiv,.sbib_b,.gsst_b,.sbdd_b,.sbsb_b,label.js-chromeless-input-container {
-    background-color:@rebase02 !important;
-    color:@rebase2 !important;
-    font-weight:bold !important;
-    border-color:@rebase2 !important;
+  #sfdiv, .sbib_b, .gsst_b, .sbdd_b, .sbsb_b, label.js-chromeless-input-container {
+    background-color: @rebase02 !important;
+    color: @rebase2 !important;
+    font-weight: bold !important;
+    border-color: @rebase2 !important;
   }
 
   // google search header
   .g a {
-    color:@rebase1 !important;
+    color: @rebase1 !important;
   }
   // google search text
   .g span {
-    color:@rebase0 !important;
+    color: @rebase0 !important;
   }
   .g em {
-    color:@blue !important;
+    color: @blue !important;
   }
 
   // google search button
-  #sblsbb{
-    background-image:none !important;
-    background-color:@rebase02 !important;
-    color:@rebase2 !important;
-    border-color:@rebase2 !important;
+  #sblsbb {
+    background-image: none !important;
+    background-color: @rebase02 !important;
+    color: @rebase2 !important;
+    border-color: @rebase2 !important;
   }
 
-  // mic
-  .sbib_b input,.gsst_b span {
-    /*
-    color:@cyan !important;
-    font-weight:bold !important;
-    */
-  }
 
   .srg {
-    color:@rebase3 !important;
-    a:@rebase3 !important;
+    color: @rebase3 !important;
+    a: @rebase3 !important;
   }
 
-
-
 }
 
-
-/* light is default mode, so pair with general html definition */
+// light is default mode, so pair with general html definition
 .light() {
-  .rebase(@base3,@base2,@base1,@base0,@base00,@base01,@base02,@base03);
+  .rebase(@base3, @base2, @base1, @base0, @base00, @base01, @base02, @base03);
 }
 
-.dark()  {
-  .rebase(@base03,@base02,@base01,@base00,@base0,@base1,@base2,@base3);
+.dark() {
+  .rebase(@base03, @base02, @base01, @base00, @base0, @base1, @base2, @base3);
 }
 
 html * {
@@ -194,14 +223,16 @@ html * {
   rendering-intent: auto !important;
 }
 
-html, body,#cnt {
+html, body, #cnt {
   .dark();
 }
 
 article {
   .light();
 }
+
 .markdown-body {
   .light();
 }
 
+*/

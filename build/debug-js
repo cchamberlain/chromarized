@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+input_path="lib/js"
+output_root="ext/src/inject"
+output_path="$output_root/inject.js"
+
+mkdir -p "$output_root"
+
+node_modules/.bin/watchify "$input_path" -o "$output_path" -dv

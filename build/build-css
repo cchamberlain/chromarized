@@ -8,4 +8,4 @@ output_path="$output_root/inject.css"
 
 mkdir -p "$output_root"
 
-node_modules/.bin/lessc "$input_path" >"$output_path"
+node_modules/.bin/lessc "$input_path" "$output_path"
