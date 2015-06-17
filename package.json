@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/cchamberlain/chromarized#readme",
   "devDependencies": {
+    "browserify": "^10.2.4",
     "less": "^2.5.1"
   }
 }
