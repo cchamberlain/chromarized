@@ -1,6 +1,6 @@
 {
   "name": "chromarized",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "smart color switching in chrome",
   "main": "index.js",
   "preferGlobal": true,
