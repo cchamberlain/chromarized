@@ -1,6 +1,6 @@
 {
     "name": "chromarized",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "manifest_version": 2,
     "description": "smart color switching in chrome",
     "homepage_url": "https://github.com/cchamberlain/chromarized",

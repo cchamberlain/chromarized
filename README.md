@@ -19,7 +19,7 @@ My IDE / terminal vs. chromarized GitHub
 
 ## partial support
 
-* [Stack Overflow](https://stackoverflow.com
+* [Stack Overflow](https://stackoverflow.com)
 * [Google Maps](https://maps.google.com)
 * [Wikipedia](https://www.wikipedia.org)
 
