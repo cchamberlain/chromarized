@@ -29,8 +29,8 @@ body {
   padding:10px 50px 0 0;
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	color: #232323;
-	background-color: #FBFAF7;
+	color: #839496;
+	background-color: #002b36;
 	margin: 0;
 	line-height: 1.8em;
 	-webkit-font-smoothing: antialiased;
@@ -38,7 +38,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#232323;
+  color:#6c71c4;
   margin:36px 0 10px;
 }
 
@@ -54,7 +54,7 @@ h1, h2, h3 {
 
 h1,h2, h3 {
 	display: block;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #268bd2;
 	padding-bottom: 5px;
 }
 
@@ -76,7 +76,7 @@ h4, h5, h6 {
 }
 
 a {
-  color:#C30000;
+  color:#268bd2;
   font-weight:200;
   text-decoration:none;
 }
@@ -116,7 +116,7 @@ blockquote {
 }
 
 dl, dt, dd, dl p {
-	font-color: #444;
+	font-color: #d33682;
 }
 
 dl dt {
@@ -135,7 +135,7 @@ dl p {
 
 hr {
   border:0;
-  background:#ccc;
+  background:#eee8d5;
   height:1px;
   margin:0 0 24px;
 }
@@ -148,7 +148,7 @@ img {
   max-width: 650px;
   padding: 5px;
   margin: 10px 0 32px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #268bd2;
 }
 
 p img {
@@ -164,15 +164,15 @@ p img {
 
 code, pre {
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color:#000;
+  color:#93a1a1;
   font-size:14px;
 }
 
 pre {
 	padding: 4px 12px;
-  background: #FDFEFB;
+  background: #586e75;
   border-radius:4px;
-  border:1px solid #D7D8C8;
+  border:1px solid #002b36;
   overflow: auto;
   overflow-y: hidden;
 	margin-bottom: 32px;
@@ -186,7 +186,7 @@ table {
 }
 
 table {
-  border: 1px solid #ccc;
+  border: 1px solid #268bd2;
   margin-bottom: 32px;
   text-align: left;
  }
@@ -196,13 +196,13 @@ th {
 	font-size: 18px;
 	font-weight: normal;
   padding: 10px;
-  background: #232323;
-  color: #FDFEFB;
+  background: #073642;
+  color: #93a1a1;
  }
 
 td {
   padding: 10px;
-	background: #ccc;
+	background: #073642;
  }
 
 
@@ -215,12 +215,12 @@ td {
 /* Header */
 
 header {
-	background-color: #171717;
-	color: #FDFDFB;
+	background-color: #073642;
+	color: #93a1a1;
   width:170px;
   float:left;
   position:fixed;
-	border: 1px solid #000;
+	border: 1px solid #268bd2;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
 	-moz-border-radius-topright: 4px;
@@ -247,7 +247,7 @@ h1.header {
 
 
 h1.header, a.header, a.name, header a{
-	color: #fff;
+	color: #859900;
 }
 
 a.header {
@@ -271,30 +271,14 @@ header li {
 	line-height: 1em;
 	padding: 6px 6px 6px 7px;
 
-	background: #AF0011;
-	background: -moz-linear-gradient(top, #AF0011 0%, #820011 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #AF0011 0%,#820011 100%);
-  background: -o-linear-gradient(top, #AF0011 0%,#820011 100%);
-  background: -ms-linear-gradient(top, #AF0011 0%,#820011 100%);
-  background: linear-gradient(top, #AF0011 0%,#820011 100%);
+	background: #073642;
 
 	border-radius:4px;
-  border:1px solid #0D0D0D;
-
-	-webkit-box-shadow: inset 0px 1px 1px 0 rgba(233,2,38, 1);
-	box-shadow: inset 0px 1px 1px 0 rgba(233,2,38, 1);
-
+  border:1px solid #268bd2;
 }
 
 header li:hover {
-	background: #C3001D;
-	background: -moz-linear-gradient(top, #C3001D 0%, #950119 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #C3001D 0%,#950119 100%);
-  background: -o-linear-gradient(top, #C3001D 0%,#950119 100%);
-  background: -ms-linear-gradient(top, #C3001D 0%,#950119 100%);
-  background: linear-gradient(top, #C3001D 0%,#950119 100%);
+	background:#073642;
 }
 
 a.buttons {
@@ -311,7 +295,7 @@ a.github {
 }
 
 a.buttons:hover {
-	color: #fff;
+	color: #6c71c4;
 	text-decoration: none;
 }
 
@@ -349,7 +333,7 @@ footer {
   }
 
 	footer {
-		border-top: 1px solid #ccc;
+		border-top: 1px solid #268bd2;
 		margin:0 84px 0 50px;
 		padding:0;
 	}
@@ -418,6 +402,6 @@ footer {
   body {
     padding:0.4in;
     font-size:12pt;
-    color:#444;
+    color:#268bd2;
   }
 }
